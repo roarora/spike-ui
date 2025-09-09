@@ -6,6 +6,18 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: [
+          '-apple-system',
+          'BlinkMacSystemFont',
+          '"Segoe UI"',
+          'Roboto',
+          '"Helvetica Neue"',
+          'Ubuntu',
+          'Arial',
+          'sans-serif'
+        ],
+      },
       colors: {
         // Supabase brand colors
         brand: {
@@ -13,20 +25,20 @@ export default {
           light: '#5FE3A1',
           dark: '#2FB479',
         },
-        // Supabase grays
+        // Warmer, more accurate Supabase grays
         scale: {
-          100: '#1C1C1C',
-          200: '#232323',
+          100: '#181818',
+          200: '#1f1f1f',
           300: '#282828',
-          400: '#2E2E2E',
-          500: '#3E3E3E',
-          600: '#4E4E4E',
-          700: '#6E6E6E',
-          800: '#8E8E8E',
-          900: '#AEAEAE',
-          1000: '#CECECE',
-          1100: '#EEEEEE',
-          1200: '#F3F3F3',
+          400: '#2e2e2e',
+          500: '#3e3e3e',
+          600: '#666666',
+          700: '#7e7e7e',
+          800: '#9e9e9e',
+          900: '#b4b4b4',
+          1000: '#cccccc',
+          1100: '#e6e6e6',
+          1200: '#f8f8f8',
         }
       }
     },

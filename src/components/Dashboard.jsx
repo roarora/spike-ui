@@ -1,14 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Sidebar from './Sidebar';
+import TopMenuBar from './TopMenuBar';
 
 function Dashboard() {
+  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
+
   return (
     <div className="min-h-screen bg-[#161616] text-gray-100">
+      {/* Top Menu Bar */}
+      <TopMenuBar />
+      
       {/* Import the Sidebar component */}
-      <Sidebar />
+      <Sidebar 
+        isCollapsed={isSidebarCollapsed} 
+        setIsCollapsed={setIsSidebarCollapsed} 
+      />
 
-      {/* Main Content Area - adjust margin based on sidebar */}
-      <div className="ml-64 transition-all duration-300">
+      {/* Main Content Area - adjust margin based on sidebar and top bar */}
+      <div className={`pt-12 transition-all duration-300 ${
+        isSidebarCollapsed ? 'ml-16' : 'ml-64'
+      }`}>
         {/* Top Header Bar */}
         <div className="h-12 bg-[#1f1f1f] border-b border-[#2E2E2E] flex items-center justify-between px-6">
           <div className="flex items-center gap-4">
